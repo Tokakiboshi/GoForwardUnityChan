@@ -19,7 +19,7 @@ public class BlockSound1 : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collistion");
         audioSource.PlayOneShot(block);
