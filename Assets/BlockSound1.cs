@@ -16,14 +16,18 @@ public class BlockSound1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("Collistion");
-        audioSource.PlayOneShot(block);
        
     }
 
-}
+     void OnCollisionEnter2D(Collision2D other)
+    { 
+        
+        if (other.gameObject.tag == "Cube Tag")
+        {
+            audioSource.PlayOneShot(block);
+        }
+       
+        } 
+    }
+
+
